@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>DND Alignment Test</title>
+    <script language="JavaScript" type="text/javascript">
+        function process() {
+            var survey = document.survey;
+            var i = 0;
+            var j = 0;
+            var value = "-1";
+            var race = "";
+            var align = "";
+            var primclass = "";
+            var secclass = "";
+            var level = 0;
+            var strength = 0;
+            var dexterity = 0;
+            var constitution = 0;
+            var intelligence = 0;
+            var wisdom = 0;
+            var charisma = 0;
+            var dwarf = 0;
+            var elf = 0;
+            var halfelf = 4;
+            var halfling = 0;
+            var human = 13;
+            var halforc = 0;
+            var gnome = 0;
+            var lg = 0;
+            var ln = 0;
+            var le = 0;
+            var ng = 0;
+            var nn = 0;
+            var ne = 0;
+            var cg = 0;
+            var cn = 0;
+            var ce = 0;
+            var tie = -1;
+            var lx = 0;
+            var nx = 0;
+            var cx = 0;
+            var xg = 0;
+            var xn = 0;
+            var xe = 0;
+            var fighter = 0;
+            var ranger = 0;
+            var paladin = 0;
+            var cleric = 0;
+            var druid = 0;
+            var bard = 0;
+            var monk = 0;
+            var sorcerer = 0;
+            var barbarian = 0;
+            var rogue = 0;
+            var wizard = 0;
+            var deitychk = 0;
+            <!--	if (survey.deity.checked) deitychk = 1;-->
+            var deity = "";
+            for (i = 0; i < survey.q201.length; i++)
+                if (survey.q201[i].checked) value = survey.q201[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xe += 1;
+                break;
+            case "4":
+                xe += 2;
+            }
+            for (i = 0; i < survey.q202.length; i++)
+                if (survey.q202[i].checked) value = survey.q202[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q203.length; i++)
+                if (survey.q203[i].checked) value = survey.q203[i].value;
+            switch (value) {
+            case "1":
+                xe += 2;
+                break;
+            case "2":
+                xe += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q204.length; i++)
+                if (survey.q204[i].checked) value = survey.q204[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                cx += 1;
+                break;
+            case "4":
+                cx += 2;
+            }
+            for (i = 0; i < survey.q205.length; i++)
+                if (survey.q205[i].checked) value = survey.q205[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q206.length; i++)
+                if (survey.q206[i].checked) value = survey.q206[i].value;
+            switch (value) {
+            case "1":
+                cx += 2;
+                break;
+            case "2":
+                cx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q207.length; i++)
+                if (survey.q207[i].checked) value = survey.q207[i].value;
+            switch (value) {
+            case "1":
+                xe += 2;
+                break;
+            case "2":
+                xe += 1;
+                break;
+            case "3":
+                xg += 1;
+                break;
+            case "4":
+                xg += 2;
+            }
+            for (i = 0; i < survey.q208.length; i++)
+                if (survey.q208[i].checked) value = survey.q208[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q209.length; i++)
+                if (survey.q209[i].checked) value = survey.q209[i].value;
+            switch (value) {
+            case "1":
+                xe += 2;
+                break;
+            case "2":
+                xe += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q210.length; i++)
+                if (survey.q210[i].checked) value = survey.q210[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                cx += 1;
+                break;
+            case "4":
+                cx += 2;
+            }
+            for (i = 0; i < survey.q211.length; i++)
+                if (survey.q211[i].checked) value = survey.q211[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q212.length; i++)
+                if (survey.q212[i].checked) value = survey.q212[i].value;
+            switch (value) {
+            case "1":
+                nx += 2;
+                break;
+            case "2":
+                nx += 1;
+                break;
+            case "3":
+                cx += 1;
+                break;
+            case "4":
+                cx += 2;
+            }
+            for (i = 0; i < survey.q213.length; i++)
+                if (survey.q213[i].checked) value = survey.q213[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q214.length; i++)
+                if (survey.q214[i].checked) value = survey.q214[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xe += 1;
+                break;
+            case "4":
+                xe += 2;
+            }
+            for (i = 0; i < survey.q215.length; i++)
+                if (survey.q215[i].checked) value = survey.q215[i].value;
+            switch (value) {
+            case "1":
+                xn += 2;
+                break;
+            case "2":
+                xn += 1;
+                break;
+            case "3":
+                xe += 1;
+                break;
+            case "4":
+                xe += 2;
+            }
+            for (i = 0; i < survey.q216.length; i++)
+                if (survey.q216[i].checked) value = survey.q216[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                cx += 1;
+                break;
+            case "4":
+                cx += 2;
+            }
+            for (i = 0; i < survey.q217.length; i++)
+                if (survey.q217[i].checked) value = survey.q217[i].value;
+            switch (value) {
+            case "1":
+                cx += 2;
+                break;
+            case "2":
+                cx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q218.length; i++)
+                if (survey.q218[i].checked) value = survey.q218[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q219.length; i++)
+                if (survey.q219[i].checked) value = survey.q219[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xe += 1;
+                break;
+            case "4":
+                xe += 2;
+            }
+            for (i = 0; i < survey.q220.length; i++)
+                if (survey.q220[i].checked) value = survey.q220[i].value;
+            switch (value) {
+            case "1":
+                xe += 2;
+                break;
+            case "2":
+                xe += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q221.length; i++)
+                if (survey.q221[i].checked) value = survey.q221[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q222.length; i++)
+                if (survey.q222[i].checked) value = survey.q222[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                cx += 1;
+                break;
+            case "4":
+                cx += 2;
+            }
+            for (i = 0; i < survey.q223.length; i++)
+                if (survey.q223[i].checked) value = survey.q223[i].value;
+            switch (value) {
+            case "1":
+                cx += 2;
+                break;
+            case "2":
+                cx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q224.length; i++)
+                if (survey.q224[i].checked) value = survey.q224[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q225.length; i++)
+                if (survey.q225[i].checked) value = survey.q225[i].value;
+            switch (value) {
+            case "1":
+                xe += 2;
+                break;
+            case "2":
+                xe += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q226.length; i++)
+                if (survey.q226[i].checked) value = survey.q226[i].value;
+            switch (value) {
+            case "1":
+                xn += 2;
+                break;
+            case "2":
+                xn += 1;
+                break;
+            case "3":
+                xg += 1;
+                break;
+            case "4":
+                xg += 2;
+            }
+            for (i = 0; i < survey.q227.length; i++)
+                if (survey.q227[i].checked) value = survey.q227[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xe += 1;
+                break;
+            case "4":
+                xe += 2;
+            }
+            for (i = 0; i < survey.q228.length; i++)
+                if (survey.q228[i].checked) value = survey.q228[i].value;
+            switch (value) {
+            case "1":
+                lx += 2;
+                break;
+            case "2":
+                lx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q229.length; i++)
+                if (survey.q229[i].checked) value = survey.q229[i].value;
+            switch (value) {
+            case "1":
+                cx += 2;
+                break;
+            case "2":
+                cx += 1;
+                break;
+            case "3":
+                nx += 1;
+                break;
+            case "4":
+                nx += 2;
+            }
+            for (i = 0; i < survey.q230.length; i++)
+                if (survey.q230[i].checked) value = survey.q230[i].value;
+            switch (value) {
+            case "1":
+                cx += 2;
+                break;
+            case "2":
+                cx += 1;
+                break;
+            case "3":
+                lx += 1;
+                break;
+            case "4":
+                lx += 2;
+            }
+            for (i = 0; i < survey.q231.length; i++)
+                if (survey.q231[i].checked) value = survey.q231[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xe += 1;
+                break;
+            case "4":
+                xe += 2;
+            }
+            for (i = 0; i < survey.q232.length; i++)
+                if (survey.q232[i].checked) value = survey.q232[i].value;
+            switch (value) {
+            case "1":
+                xg += 2;
+                break;
+            case "2":
+                xg += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q233.length; i++)
+                if (survey.q233[i].checked) value = survey.q233[i].value;
+            switch (value) {
+            case "1":
+                xe += 2;
+                break;
+            case "2":
+                xe += 1;
+                break;
+            case "3":
+                xn += 1;
+                break;
+            case "4":
+                xn += 2;
+            }
+            for (i = 0; i < survey.q234.length; i++)
+                if (survey.q234[i].checked) value = survey.q234[i].value;
+            switch (value) {
+            case "1":
+                nx += 2;
+                break;
+            case "2":
+                nx += 1;
+                break;
+            case "3":
+                lx += 1;
+                break;
+            case "4":
+                lx += 2;
+            }
+            for (i = 0; i < survey.q235.length; i++)
+                if (survey.q235[i].checked) value = survey.q235[i].value;
+            switch (value) {
+            case "1":
+                cx += 2;
+                break;
+            case "2":
+                cx += 1;
+                break;
+            case "3":
+                lx += 1;
+                break;
+            case "4":
+                lx += 2;
+            }
+            for (i = 0; i < survey.q236.length; i++)
+                if (survey.q236[i].checked) value = survey.q236[i].value;
+            switch (value) {
+            case "1":
+                nx += 2;
+                break;
+            case "2":
+                nx += 1;
+                break;
+            case "3":
+                cx += 1;
+                break;
+            case "4":
+                cx += 2;
+            }
+            lg = lx + xg;
+            ng = nx + xg;
+            cg = cx + xg;
+            ln = lx + xn;
+            nn = nx + xn;
+            cn = cx + xn;
+            le = lx + xe;
+            ne = nx + xe;
+            ce = cx + xe;
+            i = nn;
+            align = "nn";
+            if (lg > i) {
+                align = "lg";
+                i = lg;
+            }
+            if (ng > i) {
+                align = "ng";
+                i = ng;
+            }
+            if (cg > i) {
+                align = "cg";
+                i = cg;
+            }
+            if (ln > i) {
+                align = "ln";
+                i = ln;
+            }
+            if (cn > i) {
+                align = "cn";
+                i = cn;
+            }
+            if (le > i) {
+                align = "le";
+                i = le;
+            }
+            if (ne > i) {
+                align = "ne";
+                i = ne;
+            }
+            if (ce > i) {
+                align = "ce";
+                i = ce;
+            }
+            if (lg == i) tie++;
+            if (ng == i) tie++;
+            if (cg == i) tie++;
+            if (ln == i) tie++;
+            if (nn == i) tie++;
+            if (cn == i) tie++;
+            if (le == i) tie++;
+            if (ne == i) tie++;
+            if (ce == i) tie++;
+            if (tie != 0) {
+                if (lx > nx && lx > cx) align = "l";
+                else if (cx > nx && cx > lx) align = "c";
+                else align = "n";
+                if (xg > xe && xg > xn) align += "g";
+                else if (xe > xn && xe > xg) align += "e";
+                else align += "n";
+            }
+            var win = window.open("", "win", "width=900,height=550,top=25,left=50,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,location=yes");
+            with(win.document) {
+                open("text/html", "replace");
+                write("<html><head><link rel='stylesheet' type='text/css' href='alignmentstyle.css'><title>Your Results Are In!\<\/title>\<\/head>");
+                write("<body text='#000000' link='#5555FF' vlink='#6666EE' bgcolor='#F2ECDA' background='http://neppyman.irulethe.net/bk299.gif'>");
+                write("<center><h2><b><font color='#000000'>You Are:\<\/font>\<\/b>\<\/h2>\<\/center>");
+                write("<br><center><h1><b>");
+                switch (align) {
+                case "lg":
+                    write("Lawful Good ");
+                    break;
+                case "ng":
+                    write("Neutral Good ");
+                    break;
+                case "cg":
+                    write("Chaotic Good ");
+                    break;
+                case "ln":
+                    write("Lawful Neutral ");
+                    break;
+                case "nn":
+                    write("True Neutral ");
+                    break;
+                case "cn":
+                    write("Chaotic Neutral ");
+                    break;
+                case "le":
+                    write("Lawful Evil ");
+                    break;
+                case "ne":
+                    write("Neutral Evil ");
+                    break;
+                case "ce":
+                    write("Chaotic Evil ");
+                }
+                write("\<\/h1>");
+                write("\<\/b>\<\/center><br><br><b>");
+                switch (align) {
+                case "lg":
+                    write("Lawful Good-\<\/b> A lawful good character acts as a good person is expected or required to act. He combines a commitment to oppose evil with the discipline to fight relentlessly. He tells the truth, keeps his word, helps those in need, and speaks out against injustice. A lawful good character hates to see the guilty go unpunished.  Lawful good is the best alignment you can be because it combines honor and compassion.  However, lawful good can be a dangerous alignment when it restricts freedom and criminalizes self-interest.");
+                    break;
+                case "ng":
+                    write("Neutral Good-\<\/b> A neutral good character does the best that a good person can do. He is devoted to helping others. He works with kings and magistrates but does not feel beholden to them. Neutral good is the best alignment you can be because it means doing what is good without bias for or against order. However, neutral good can be a dangerous alignment because when it advances mediocrity by limiting the actions of the truly capable.");
+                    break;
+                case "cg":
+                    write("Chaotic Good-\<\/b> A chaotic good character acts as his conscience directs him with little regard for what others expect of him. He makes his own way, but he's kind and benevolent. He believes in goodness and right but has little use for laws and regulations. He hates it when people try to intimidate others and tell them what to do. He follows his own moral compass, which, although good, may not agree with that of society. Chaotic good is the best alignment you can be because it combines a good heart with a free spirit. However, chaotic good can be a dangerous alignment when it disrupts the order of society and punishes those who do well for themselves.");
+                    break;
+                case "ln":
+                    write("Lawful Neutral-\<\/b> A lawful neutral character acts as law, tradition, or a personal code directs him. Order and organization are paramount to him. He may believe in personal order and live by a code or standard, or he may believe in order for all and favor a strong, organized government. Lawful neutral is the best alignment you can be because it means you are reliable and honorable without being a zealot. However, lawful neutral can be a dangerous alignment when it seeks to eliminate all freedom, choice, and diversity in society.");
+                    break;
+                case "nn":
+                    write("True Neutral-\<\/b> A true neutral character does what seems to be a good idea. He doesn't feel strongly one way or the other when it comes to good vs. evil or law vs. chaos. Most true neutral characters exhibit a lack of conviction or bias rather than a commitment to neutrality. Such a character thinks of good as better than evil after all, he would rather have good neighbors and rulers than evil ones. Still, he's not personally committed to upholding good in any abstract or universal way. Some true neutral characters, on the other hand, commit themselves philosophically to neutrality. They see good, evil, law, and chaos as prejudices and dangerous extremes. They advocate the middle way of neutrality as the best, most balanced road in the long run. True neutral is the best alignment you can be because it means you act naturally, without prejudice or compulsion. However, true neutral can be a dangerous alignment when it represents apathy, indifference, and a lack of conviction.");
+                    break;
+                case "cn":
+                    write("Chaotic Neutral-\<\/b> A chaotic neutral character follows his whims. He is an individualist first and last. He values his own liberty but doesn't strive to protect others' freedom. He avoids authority, resents restrictions, and challenges traditions. A chaotic neutral character does not intentionally disrupt organizations as part of a campaign of anarchy. To do so, he would have to be motivated either by good (and a desire to liberate others) or evil (and a desire to make those different from himself suffer). A chaotic neutral character may be unpredictable, but his behavior is not totally random. He is not as likely to jump off a bridge as to cross it. Chaotic neutral is the best alignment you can be because it represents true freedom from both society's restrictions and a do-gooder's zeal. However, chaotic neutral can be a dangerous alignment when it seeks to eliminate all authority, harmony, and order in society.");
+                    break;
+                case "le":
+                    write("Lawful Evil-\<\/b> A lawful evil villain methodically takes what he wants within the limits of his code of conduct without regard for whom it hurts. He cares about tradition, loyalty, and order but not about freedom, dignity, or life. He plays by the rules but without mercy or compassion. He is comfortable in a hierarchy and would like to rule, but is willing to serve. He condemns others not according to their actions but according to race, religion, homeland, or social rank. He is loath to break laws or promises.  This reluctance comes partly from his nature and partly because he depends on order to protect himself from those who oppose him on moral grounds. Some lawful evil villains have particular taboos, such as not killing in cold blood (but having underlings do it) or not letting children come to harm (if it can be helped). They imagine that these compunctions put them above unprincipled villains.  Some lawful evil people and creatures commit themselves to evil with a zeal like that of a crusader committed to good. Beyond being willing to hurt others for their own ends, they take pleasure in spreading evil as an end unto itself. They may also see doing evil as part of a duty to an evil deity or master. Lawful evil is sometimes called diabolical, because devils are the epitome of lawful evil. Lawful evil is the best alignment you can be because it combines honor and dedicated self-interest. However, lawful evil can be a dangerous alignment because it represents methodical, intentional, and frequently successful evil.");
+                    break;
+                case "ne":
+                    write("Neutral Evil-\<\/b> A neutral evil villain does whatever he can get away with. He is out for himself, pure and simple. He sheds no tears for those he kills, whether for profit, sport, or convenience. He has no love of order and holds no illusion that following laws, traditions, or codes would make him any better or more noble. On the other hand, he doesn't have the restless nature or love of conflict that a chaotic evil villain has.  Some neutral evil villains hold up evil as an ideal, committing evil for its own sake. Most often, such villains are devoted to evil deities or secret societies. Neutral evil is the best alignment you can be because you can advance yourself without regard for others. However, neutral evil can be a dangerous alignment because it represents pure evil without honor and without variation.");
+                    break;
+                case "ce":
+                    write("Chaotic Evil-\<\/b> A chaotic evil character does whatever his greed, hatred, and lust for destruction drive him to do. He is hot-tempered, vicious, arbitrarily violent, and unpredictable. If he is simply out for whatever he can get, he is ruthless and brutal. If he is committed to the spread of evil and chaos, he is even worse. Thankfully, his plans are haphazard, and any groups he joins or forms are poorly organized. Typically, chaotic evil people can be made to work together only by force, and their leader lasts only as long as he can thwart attempts to topple or assassinate him. Chaotic evil is sometimes called demonic because demons are the epitome of chaotic evil. Chaotic evil is the best alignment you can be because combines self-interest and pure freedom. However, chaotic evil can be a dangerous alignment because it represents the destruction not only of beauty and life but also of the order on which beauty and life depend.");
+                }
+                write("<br><hr><br>\<\/center>");
+                write("<b>Detailed Results:\<\/b><br><br>");
+                write("<u>Alignment:\<\/u><br><samp>");
+                write("Lawful Good ----- ");
+                for (i = 0; i < lg; i++) write("X");
+                write(" (", lg, ")<br>");
+                write("Neutral Good ---- ");
+                for (i = 0; i < ng; i++) write("X");
+                write(" (", ng, ")<br>");
+                write("Chaotic Good ---- ");
+                for (i = 0; i < cg; i++) write("X");
+                write(" (", cg, ")<br>");
+                write("Lawful Neutral -- ");
+                for (i = 0; i < ln; i++) write("X");
+                write(" (", ln, ")<br>");
+                write("True Neutral ---- ");
+                for (i = 0; i < nn; i++) write("X");
+                write(" (", nn, ")<br>");
+                write("Chaotic Neutral - ");
+                for (i = 0; i < cn; i++) write("X");
+                write(" (", cn, ")<br>");
+                write("Lawful Evil ----- ");
+                for (i = 0; i < le; i++) write("X");
+                write(" (", le, ")<br>");
+                write("Neutral Evil ---- ");
+                for (i = 0; i < ne; i++) write("X");
+                write(" (", ne, ")<br>");
+                write("Chaotic Evil ---- ");
+                for (i = 0; i < ce; i++) write("X");
+                write(" (", ce, ")<br>");
+                write("\<\/samp><br><u>Law &amp; Chaos:\<\/u><br><samp>");
+                write("Law ----- ");
+                for (i = 0; i < lx; i++) write("X");
+                write(" (", lx, ")<br>");
+                write("Neutral - ");
+                for (i = 0; i < nx; i++) write("X");
+                write(" (", nx, ")<br>");
+                write("Chaos --- ");
+                for (i = 0; i < cx; i++) write("X");
+                write(" (", cx, ")<br>");
+                write("\<\/samp><br><u>Good &amp; Evil:\<\/u><br><samp>");
+                write("Good ---- ");
+                for (i = 0; i < xg; i++) write("X");
+                write(" (", xg, ")<br>");
+                write("Neutral - ");
+                for (i = 0; i < xn; i++) write("X");
+                write(" (", xn, ")<br>");
+                write("Evil ---- ");
+                for (i = 0; i < xe; i++) write("X");
+                write(" (", xe, ")<br>");
+                write("\<\/samp>");
+                write("<input type=hidden name=\".referer\"value=\"http://www.easydamus.com/Character2.html\" >");
+                write("</form>");
+                write("<br><br>");
+                write("<center><a href='javascript: self.close()'>(close this window)\<\/a></center>");
+                write("\<\/body>\<\/html>");
+                close();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>DND Alignment Test</h1>
+    <p>Origional Page : <a href="http://www.padnd.com/alignment_test2.php">http://www.padnd.com/alignment_test2.php </a></p>
+    <form name="survey" action="">
+        <hr>
+        <p> <a class="question">1. Family elders are expressing disapproval of
+          you to the rest of the family. Do you:</a>
+            <br>
+            <br>
+            <input name="q201" value="1" type="radio"> Accept the criticism and change your ways?
+            <br>
+            <input name="q201" value="2" type="radio"> Seek a compromise with them?
+            <br>
+            <input name="q201" value="3" type="radio"> Besmirch the reputation of those expressing disapproval as you ignore their scorn?
+            <br>
+            <input name="q201" value="4" type="radio"> Silence them any way you can?
+            <br> </p>
+        <hr>
+        <p> <a class="question">2. Would you give up a promising career to aid
+          the family in time of need?</a>
+            <br>
+            <br>
+            <input name="q202" value="1" type="radio"> In a heartbeat.
+            <br>
+            <input name="q202" value="2" type="radio"> Yes, with some reluctance.
+            <br>
+            <input name="q202" value="3" type="radio"> Only if I was certain I'd be able to return to my career soon.
+            <br>
+            <input name="q202" value="4" type="radio"> No.
+            <br> </p>
+        <hr>
+        <p> <a class="question">3. Would you betray a family member to advance
+          your own career?</a>
+            <br>
+            <br>
+            <input name="q203" value="1" type="radio"> Yes, without a twinge of guilt.
+            <br>
+            <input name="q203" value="2" type="radio"> Yes, if I could do it secretly.
+            <br>
+            <input name="q203" value="3" type="radio"> I'd resist the temptation.
+            <br>
+            <input name="q203" value="4" type="radio"> I find the very idea abhorrent.
+            <br> </p>
+        <hr>
+        <p> <a class="question">4. Do you respect the leaders of your family?</a>
+            <br>
+            <br>
+            <input name="q204" value="1" type="radio"> Their words guide my actions.
+            <br>
+            <input name="q204" value="2" type="radio"> They're role models for me.
+            <br>
+            <input name="q204" value="3" type="radio"> They're often out of touch with my life.
+            <br>
+            <input name="q204" value="4" type="radio"> They're out of touch with reality.
+            <br> </p>
+        <hr>
+        <p> <a class="question">5. If your family had arranged your marriage to
+          someone loathsome, would you:</a>
+            <br>
+            <br>
+            <input name="q205" value="1" type="radio"> Go through with it, proud to serve your family?
+            <br>
+            <input name="q205" value="2" type="radio"> Agree, hiding your reluctance?
+            <br>
+            <input name="q205" value="3" type="radio"> Subtly work against the union?
+            <br>
+            <input name="q205" value="4" type="radio"> Flee?
+            <br> </p>
+        <hr>
+        <p> <a class="question">6. You're estranged from a family member. On his
+          deathbed, he seeks reconciliation. Do you:</a>
+            <br>
+            <br>
+            <input name="q206" value="1" type="radio"> Speak to him, but hold your ground?
+            <br>
+            <input name="q206" value="2" type="radio"> Refuse to speak to him?
+            <br>
+            <input name="q206" value="3" type="radio"> Discuss your estrangement openly and without rancor?
+            <br>
+            <input name="q206" value="4" type="radio"> Actively seek reconciliation, and heed his dying words?
+            <br> </p>
+        <hr>
+        <p> <a class="question">7. A powerful but corrupt judge offers you wealth
+          if you'll testify against your friend. Do you:</a>
+            <br>
+            <br>
+            <input name="q207" value="1" type="radio"> Condemn your friend and take the money?
+            <br>
+            <input name="q207" value="2" type="radio"> Take the money and testify, but try to keep your testimony ineffective?
+            <br>
+            <input name="q207" value="3" type="radio"> Refuse the offer and refuse to testify?
+            <br>
+            <input name="q207" value="4" type="radio"> Testify on your friend's behalf, no matter the consequences?
+            <br> </p>
+        <hr>
+        <p> <a class="question">8. Do you become close to friends, or hold most
+          people at a safe distance?</a>
+            <br>
+            <br>
+            <input name="q208" value="1" type="radio"> I have an abundance of close friends.
+            <br>
+            <input name="q208" value="2" type="radio"> I have some close friends.
+            <br>
+            <input name="q208" value="3" type="radio"> I have few close friends.
+            <br>
+            <input name="q208" value="4" type="radio"> I try to keep people at a distance.
+            <br> </p>
+        <hr>
+        <p> <a class="question">9. Have you ever betrayed a friend?</a>
+            <br>
+            <br>
+            <input name="q209" value="1" type="radio"> I've done so more than once, and I sometimes get away with it.
+            <br>
+            <input name="q209" value="2" type="radio"> I've done so once.
+            <br>
+            <input name="q209" value="3" type="radio"> I've been tempted to do so, but I've never gone through with it.
+            <br>
+            <input name="q209" value="4" type="radio"> I'd never contemplate such a thing.
+            <br> </p>
+        <hr>
+        <p> <a class="question">10. How do you view lifelong commitment to a
+          single romantic partner?</a>
+            <br>
+            <br>
+            <input name="q210" value="1" type="radio"> I have or want such a romance.
+            <br>
+            <input name="q210" value="2" type="radio"> Such a romance would be ideal--if it's achievable.
+            <br>
+            <input name="q210" value="3" type="radio"> I worry I'd miss out on what others have to offer.
+            <br>
+            <input name="q210" value="4" type="radio"> Tie yourself to one person? Huge mistake.
+            <br> </p>
+        <hr>
+        <p> <a class="question">11. Do you insist on repayment when lending money
+          to friends?</a>
+            <br>
+            <br>
+            <input name="q211" value="1" type="radio"> Yes, and I write up a contract so there's no misunderstanding.
+            <br>
+            <input name="q211" value="2" type="radio"> Yes, but I try to be flexible about the exact terms.
+            <br>
+            <input name="q211" value="3" type="radio"> No, although it's sure nice to be repaid.
+            <br>
+            <input name="q211" value="4" type="radio"> No, they just owe me a favor.
+            <br> </p>
+        <hr>
+        <p> <a class="question">12. Are you still in touch with childhood
+          friends?</a>
+            <br>
+            <br>
+            <input name="q212" value="1" type="radio"> Yes, we correspond regularly.
+            <br>
+            <input name="q212" value="2" type="radio"> Yes, we try to keep in touch.
+            <br>
+            <input name="q212" value="3" type="radio"> No, I move around to much.
+            <br>
+            <input name="q212" value="4" type="radio"> No, I don't have anything in common with them anymore.
+            <br> </p>
+        <hr>
+        <p> <a class="question">13. Do you donate time and money to improve the
+          local community?</a>
+            <br>
+            <br>
+            <input name="q213" value="1" type="radio"> Yes, the needs of the community are my top priority.
+            <br>
+            <input name="q213" value="2" type="radio"> Yes, I donate as much as I can once my own needs are met.
+            <br>
+            <input name="q213" value="3" type="radio"> No, I don't have enough time or money to spare.
+            <br>
+            <input name="q213" value="4" type="radio"> No, my local community would be a waste of time and money.
+            <br> </p>
+        <hr>
+        <p> <a class="question">14. Your community is threatened with invasion.
+          Do you:</a>
+            <br>
+            <br>
+            <input name="q214" value="1" type="radio"> Help defend it to your last breath?
+            <br>
+            <input name="q214" value="2" type="radio"> Defend the area with the rest of your community?
+            <br>
+            <input name="q214" value="3" type="radio"> Flee as soon as things look grim?
+            <br>
+            <input name="q214" value="4" type="radio"> Cut a deal with the enemy to act as a spy?
+            <br> </p>
+        <hr>
+        <p> <a class="question">15. If you were injured and required immediate
+          assistance, would members of your home town agree to help?</a>
+            <br>
+            <br>
+            <input name="q215" value="1" type="radio"> Yes, because they know I'd do the same for them.
+            <br>
+            <input name="q215" value="2" type="radio"> Yes, because I'm generally well liked in my home town.
+            <br>
+            <input name="q215" value="3" type="radio"> Probably not, because I'm distrusted in my home town.
+            <br>
+            <input name="q215" value="4" type="radio"> Definitely not, I've made some enemies in my home town.
+            <br> </p>
+        <hr>
+        <p> <a class="question">16. Do you respect the laws and authorities of
+          the community?</a>
+            <br>
+            <br>
+            <input name="q216" value="1" type="radio"> Yes, without question.
+            <br>
+            <input name="q216" value="2" type="radio"> Yes, they're generally the best way to govern.
+            <br>
+            <input name="q216" value="3" type="radio"> When it suits me--there are some laws I just don't agree with.
+            <br>
+            <input name="q216" value="4" type="radio"> I don't pay attention to the authorities; they've got no hold on me.
+            <br> </p>
+        <hr>
+        <p> <a class="question">17. Do members of your home town shun, avoid, or
+          mock you?</a>
+            <br>
+            <br>
+            <input name="q217" value="1" type="radio"> Yes, their small minds can't handle anyone outside the norm.
+            <br>
+            <input name="q217" value="2" type="radio"> Some do, because I don't always fit in.
+            <br>
+            <input name="q217" value="3" type="radio"> No, I'm generally seen as normal.
+            <br>
+            <input name="q217" value="4" type="radio"> No, I set the standard for what is normal in my community.
+            <br> </p>
+        <hr>
+        <p> <a class="question">18. Would you stand for office or seek to
+          represent the interests of the community in some public manner?</a>
+            <br>
+            <br>
+            <input name="q218" value="1" type="radio"> To do so would be an honor I'd joyously accept.
+            <br>
+            <input name="q218" value="2" type="radio"> Of course. It's everyone's duty to do so.
+            <br>
+            <input name="q218" value="3" type="radio"> Only if no one else could handle the job.
+            <br>
+            <input name="q218" value="4" type="radio"> No, I don't want to be responsible for the community's welfare.
+            <br> </p>
+        <hr>
+        <p> <a class="question">19. Your country is wracked with famine. Would
+          you:</a>
+            <br>
+            <br>
+            <input name="q219" value="1" type="radio"> Share what food you had with others?
+            <br>
+            <input name="q219" value="2" type="radio"> Eat as little as possible yourself, and share the rest?
+            <br>
+            <input name="q219" value="3" type="radio"> Steal what food you needed to survive?
+            <br>
+            <input name="q219" value="4" type="radio"> Steal as much food as possible, then sell it back to the community at a high price?
+            <br> </p>
+        <hr>
+        <p> <a class="question">20. If offered enough money, would you slip a
+          poison into your king's drink?</a>
+            <br>
+            <br>
+            <input name="q220" value="1" type="radio"> Yes, I've done similar things before.
+            <br>
+            <input name="q220" value="2" type="radio"> Yes, if I thought I could get away with it.
+            <br>
+            <input name="q220" value="3" type="radio"> No, although a vast sum of money would tempt me.
+            <br>
+            <input name="q220" value="4" type="radio"> No, and I'd warn the king of the plot.
+            <br> </p>
+        <hr>
+        <p> <a class="question">21. A plague is sweeping across your country.
+          Would you:</a>
+            <br>
+            <br>
+            <input name="q221" value="1" type="radio"> Undertake a dangerous mission to find the cure?
+            <br>
+            <input name="q221" value="2" type="radio"> Heal the sick as best you can?
+            <br>
+            <input name="q221" value="3" type="radio"> Avoid contact with the sick?
+            <br>
+            <input name="q221" value="4" type="radio"> Flee the country?
+            <br> </p>
+        <hr>
+        <p> <a class="question">22. Do you respect the lawful authority of the
+          rulers of the land?</a>
+            <br>
+            <br>
+            <input name="q222" value="1" type="radio"> Yes, Long live the queen!
+            <br>
+            <input name="q222" value="2" type="radio"> Yes, our rulers are generally fair and just.
+            <br>
+            <input name="q222" value="3" type="radio"> No, a ruler is no better than anyone else.
+            <br>
+            <input name="q222" value="4" type="radio"> No, rulers are invariably corrupted by power.
+            <br> </p>
+        <hr>
+        <p> <a class="question">23. If you were offered a reasonably lucrative
+          deal, would you spy for a hostile foreign power?</a>
+            <br>
+            <br>
+            <input name="q223" value="1" type="radio"> Yes, because this nation could stand to be knocked down a peg.
+            <br>
+            <input name="q223" value="2" type="radio"> Yes, because the nation's secrets mean little to me.
+            <br>
+            <input name="q223" value="3" type="radio"> No, because I might get caught.
+            <br>
+            <input name="q223" value="4" type="radio"> No, because I'd never violate the trust my nation puts in me.
+            <br> </p>
+        <hr>
+        <p> <a class="question">24. Do you rely on the government to enforce
+          contracts and property rights?</a>
+            <br>
+            <br>
+            <input name="q224" value="1" type="radio"> Yes, because maintaining the rule of law is more important than any individual dispute.
+            <br>
+            <input name="q224" value="2" type="radio"> Yes, because the courts are best equipped to handle such disputes.
+            <br>
+            <input name="q224" value="3" type="radio"> Are you kidding me? The government can't even pave roads.
+            <br>
+            <input name="q224" value="4" type="radio"> Absolutely not. If I can't defend it myself, I don't deserve to have it.
+            <br> </p>
+        <hr>
+        <p> <a class="question">25. If imprisoned, would you injure or kill
+          others to escape?</a>
+            <br>
+            <br>
+            <input name="q225" value="1" type="radio"> Yes. Serves 'em right for locking me up.
+            <br>
+            <input name="q225" value="2" type="radio"> Yes. They knew the risks when they took the job.
+            <br>
+            <input name="q225" value="3" type="radio"> No, except for minor wounds that will heal easily.
+            <br>
+            <input name="q225" value="4" type="radio"> No. Those guards are just doing their jobs.
+            <br> </p>
+        <hr>
+        <p> <a class="question">26. Do you accept a noble's right to treat badly
+          the serfs who work on his land?</a>
+            <br>
+            <br>
+            <input name="q226" value="1" type="radio"> Yes. They're lucky they're not slaves.
+            <br>
+            <input name="q226" value="2" type="radio"> Yes, because sometimes only fear will motivate them.
+            <br>
+            <input name="q226" value="3" type="radio"> No, nobles should rule as kindly as possible.
+            <br>
+            <input name="q226" value="4" type="radio"> No one has any "right" to treat another badly. Period.
+            <br> </p>
+        <hr>
+        <p> <a class="question">27. You have accidentally committed a crime. Do
+          you:</a>
+            <br>
+            <br>
+            <input name="q227" value="1" type="radio"> Turn yourself in, and attempt to make restitution to the victim?
+            <br>
+            <input name="q227" value="2" type="radio"> Turn yourself in, throwing yourself on the mercy of the court?
+            <br>
+            <input name="q227" value="3" type="radio"> Hide your involvement, lying if you have to?
+            <br>
+            <input name="q227" value="4" type="radio"> Try to pin the crime on another?
+            <br> </p>
+        <hr>
+        <p> <a class="question">28. If guilty, would you confess to a crime?</a>
+            <br>
+            <br>
+            <input name="q228" value="1" type="radio"> Yes, because it is my duty to do so.
+            <br>
+            <input name="q228" value="2" type="radio"> Yes, because it might get me a lighter sentence.
+            <br>
+            <input name="q228" value="3" type="radio"> No, I'd make the magistrates prove my guilt.
+            <br>
+            <input name="q228" value="4" type="radio"> No, and I'd try to "prove" my own innocence.
+            <br> </p>
+        <hr>
+        <p> <a class="question">29. Would you express a revolutionary political
+          opinion if threatened with punishment?</a>
+            <br>
+            <br>
+            <input name="q229" value="1" type="radio"> Yes, I'd rather be punished than remain silent.
+            <br>
+            <input name="q229" value="2" type="radio"> Yes. Somebody's got to speak the truth.
+            <br>
+            <input name="q229" value="3" type="radio"> No, although I might privately express my opinion to friends.
+            <br>
+            <input name="q229" value="4" type="radio"> No, politics aren't worth getting worked up about.
+            <br> </p>
+        <hr>
+        <p> <a class="question">30. While traveling, you witness an assault. You
+          are ordered to testify, which will delay your travel significantly. Do
+          you:</a>
+            <br>
+            <br>
+            <input name="q230" value="1" type="radio"> Slip out of town at night to avoid testifying.
+            <br>
+            <input name="q230" value="2" type="radio"> Deny you saw anything.
+            <br>
+            <input name="q230" value="3" type="radio"> Remain reluctantly, testify, and leave.
+            <br>
+            <input name="q230" value="4" type="radio"> Remain until the trial's conclusion in case further testimony is needed.
+            <br> </p>
+        <hr>
+        <p> <a class="question">31. What is the best use of wealth?</a>
+            <br>
+            <br>
+            <input name="q231" value="1" type="radio"> To help the destitute and less fortunate.
+            <br>
+            <input name="q231" value="2" type="radio"> Provide for the needs of friends and family.
+            <br>
+            <input name="q231" value="3" type="radio"> To stay on top of the heap yourself.
+            <br>
+            <input name="q231" value="4" type="radio"> To not only stay on top, but keep others from climbing to your level.
+            <br> </p>
+        <hr>
+        <p> <a class="question">32. When confronted by beggars, do you:</a>
+            <br>
+            <br>
+            <input name="q232" value="1" type="radio"> Give generously?
+            <br>
+            <input name="q232" value="2" type="radio"> Give moderately?
+            <br>
+            <input name="q232" value="3" type="radio"> Give only what you wouldn't miss anyway--a dollar or two at the most?
+            <br>
+            <input name="q232" value="4" type="radio"> Ignore them as you walk by?
+            <br> </p>
+        <hr>
+        <p> <a class="question">33. By using magic, you could fool village
+          merchants into thinking your copper pieces were made of gold. Do you?</a>
+            <br>
+            <br>
+            <input name="q233" value="1" type="radio"> Yes, and I'll buy as much as I can.
+            <br>
+            <input name="q233" value="2" type="radio"> Yes, but I'll only cheat the rich merchants.
+            <br>
+            <input name="q233" value="3" type="radio"> No, it's too risky.
+            <br>
+            <input name="q233" value="4" type="radio"> No, those merchants have families to feed.
+            <br> </p>
+        <hr>
+        <p> <a class="question">34. You have two job offers. One pays more, but
+          the other is secure and steady. Which do you choose?</a>
+            <br>
+            <br>
+            <input name="q234" value="1" type="radio"> Definitely the lucrative job; steady work sounds like drudgery.
+            <br>
+            <input name="q234" value="2" type="radio"> Probably the lucrative job, although I'd look into the secure job.
+            <br>
+            <input name="q234" value="3" type="radio"> The secure job, unless the other job was outrageously lucrative.
+            <br>
+            <input name="q234" value="4" type="radio"> Definitely the secure job, because I plan for the long term.
+            <br> </p>
+        <hr>
+        <p> <a class="question">35. What's the best path to wealth?</a>
+            <br>
+            <br>
+            <input name="q235" value="1" type="radio"> It's a matter of luck and being in the right place at the right time.
+            <br>
+            <input name="q235" value="2" type="radio"> Staying flexible so you can take advantage of good opportunities.
+            <br>
+            <input name="q235" value="3" type="radio"> Following a long-term plan that incorporates a comfortable level of risk.
+            <br>
+            <input name="q235" value="4" type="radio"> Hard work and perseverance.
+            <br> </p>
+        <hr>
+        <p> <a class="question">36. If you accepted a job or contract, would you
+          try to finish the task even if it got much more dangerous?</a>
+            <br>
+            <br>
+            <input name="q236" value="1" type="radio"> Yes, my word is my bond.
+            <br>
+            <input name="q236" value="2" type="radio"> Yes, because it's good to have a reputation for dependability.
+            <br>
+            <input name="q236" value="3" type="radio"> You can bet I'd be renegotiating.
+            <br>
+            <input name="q236" value="4" type="radio"> If it's no longer a good deal, then the deal is off.
+            <br> </p>
+        <p> </p>
+        <hr>
+        <p> </p>
+        <center>
+            <a class="button">
+                <input value="What is my alignment?" onclick="process();" type="button">
+                <input value="Reset and Return to Top" type="reset" onclick="location.href='#top'"> </a>
+            <br>
+            <br> <i>Before clicking, make sure JavaScript is enabled, and that all pop-up window-managers are disabled!</i>
+            <br>
+            <br> </center>
+    </form>
+</body>
+
+</html>
